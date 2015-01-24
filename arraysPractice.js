@@ -7,7 +7,7 @@ var arr = [10,20,30];
   //Code Here
 var first = function(inpArr) {
   return inpArr[0];
-}
+};
 
 //Next problem
 
@@ -20,7 +20,7 @@ var arr = [40,50,60];
   //Code Here
 var last = function(inpArr) {
   return inpArr[inpArr.length - 1];
-}
+};
 
 //Next Problem
 
@@ -33,7 +33,7 @@ var looper = function(inpArr) {
   for (var i = 0; i < inpArr.length; i++) {
     alert(inpArr[i]);
   }
-}
+};
 
 //Next problem
 
@@ -48,7 +48,7 @@ var reversedLooper = function(inpArr) {
   for(var i = 0; i < revArr.length; i++) {
     alert(revArr[i]);
   }
-}
+};
 
 //Next Problem
 
@@ -65,7 +65,7 @@ var evenFinder = function(inpArr) {
     }
   }
   return evenArr;
-}
+};
 
 //Next problem
 
@@ -90,7 +90,7 @@ var divider = function(inpArr, inpArrEven, inpArrOdd) {
   }
   finalArr.push(inpArrEven, inpArrOdd);
   return finalArr;
-}
+};
 
 //Next Problem
 
@@ -113,7 +113,7 @@ var finder = function(inpArr) {
       return false;
     }
   }
-}
+};
 
 //Next problem
 
@@ -126,7 +126,7 @@ var str = 'this is my sentence';
  var reverse = function(inpStr) {
   var rvsStr = inpStr.split('').reverse().join('');
   return rvsStr;
- }
+ };
 
 //Next Problem
 
@@ -154,12 +154,29 @@ var removeItem = function(myGroceryList, itemToRemove) {
     }
   }
   return myGroceryList;
-}
+};
 
 var addItem = function(myGroceryList, itemtoAdd) {
   myGroceryList.push(itemtoAdd);
   return myGroceryList;
-}
+};
+
+/*
+another way to do addItem that is recommended
+var addItem = function(myGroceryList, itemtoAdd) {
+  var isPresent = false;
+  for (var i = 0; i < grocertyList.length; i++) {
+    if (groceryList[i] === item) {
+      isPresent = true;
+    }
+    if (isPresent === false) { //for this spot, if statement is looking for truthy value, so if false, it will run, so it can look like this (if (isPresent))
+      groceryList.push(item);
+      }
+    }
+    return groceryList;
+  }
+};
+*/
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -179,7 +196,7 @@ var createArray = function() {
     numArr[i] = i + 1;
   }
   return numArr;
-}
+};
 
 
 //Next Problem
@@ -195,7 +212,7 @@ var addTen = function(numbers) {
     numbers[i] = parseInt(numbers[i]) + 10;
   }
   return numbers;
-}
+};
 
 
 //Next Problem
@@ -216,7 +233,7 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
-var countArr = function(arr1, arr2) {
+/*var countArr = function(arr1, arr2) {
   var countArr1;
   var countArr2;
   for (var i = 0; i < arr1.length; i++) {
@@ -232,7 +249,19 @@ var countArr = function(arr1, arr2) {
   } else {
     alert("The arrays are the same length.");
   }
-}
+};*/
+
+
+//another easier way to do it:
+var countArr = function(arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    return arr1;
+  } else if (arr1.length < arr2.length) {
+    return arr2;
+  } else {
+  return null;
+  }
+};
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -249,4 +278,4 @@ var both = function(arr1, arr2) {
     combinedArr.push(arr2[i]);
   }
   return combinedArr;
-}
+};
