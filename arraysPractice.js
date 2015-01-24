@@ -161,8 +161,8 @@ var addItem = function(myGroceryList, itemtoAdd) {
   return myGroceryList;
 }
 
-removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+//removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+//addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
