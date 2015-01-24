@@ -144,8 +144,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
-//removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-//addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+var removeItem = function(myGroceryList, itemToRemove) {
+  for (var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === itemToRemove) {
+      myGroceryList.splice(i, 1);
+      break;
+    } else {
+      alert("Thats not on the list.")
+    }
+  }
+  return myGroceryList;
+}
+
+var addItem = function(myGroceryList, itemtoAdd) {
+  myGroceryList.push(itemtoAdd);
+  return myGroceryList;
+}
+
+removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
@@ -156,7 +173,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
+var createArray = function() {
+  var numArr = [];
+  for (var i = 0; i < 215; i++) {
+    numArr[i] = i + 1;
+  }
+  return numArr;
+}
 
 
 //Next Problem
@@ -167,7 +190,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
-
+var addTen = function(numbers) {
+  for (i = 0; i < numbers.length; i++) {
+    numbers[i] = parseInt(numbers[i]) + 10;
+  }
+  return numbers;
+}
 
 
 //Next Problem
@@ -188,7 +216,23 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
-
+var countArr = function(arr1, arr2) {
+  var countArr1;
+  var countArr2;
+  for (var i = 0; i < arr1.length; i++) {
+    countArr1++;
+  }
+  for (var i = 0; i < arr2.length; i++) {
+    countArr2++;
+  }
+  if (countArr1 > countArr2) {
+    return arr1;
+  } else if (countArr1 < countArr2) {
+    return arr2;
+  } else {
+    alert("The arrays are the same length.");
+  }
+}
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -196,3 +240,13 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+var both = function(arr1, arr2) {
+  var combinedArr = [];
+  for (var i = 0; i < arr1.length; i++) {
+    combinedArr.push(arr1[i]);
+  }
+  for (var i = 0; i < arr2.length; i++) {
+    combinedArr.push(arr2[i]);
+  }
+  return combinedArr;
+}
